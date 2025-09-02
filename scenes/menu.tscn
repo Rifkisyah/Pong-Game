@@ -1,0 +1,114 @@
+[gd_scene load_steps=16 format=3 uid="uid://nhso0jjshe80"]
+
+[ext_resource type="Texture2D" uid="uid://cj202rrvv2g3r" path="res://assets/images/background.png" id="1_08a8y"]
+[ext_resource type="Texture2D" uid="uid://clskb2hgq4ko4" path="res://assets/images/menu.png" id="2_7yii4"]
+[ext_resource type="Texture2D" uid="uid://brcy8u2o7bk2x" path="res://assets/images/play-button-hover.png" id="3_4yt8u"]
+[ext_resource type="Texture2D" uid="uid://dys3wptv8obyu" path="res://assets/images/play-button.png" id="4_p54wi"]
+[ext_resource type="Texture2D" uid="uid://buq5o81r4r8j6" path="res://assets/images/credits-button-hover.png" id="5_4yt8u"]
+[ext_resource type="Texture2D" uid="uid://cmi6d1bxo3o0f" path="res://assets/images/credits-button.png" id="5_xki8e"]
+[ext_resource type="Texture2D" uid="uid://c4na6s7h0adnf" path="res://assets/images/quit-button-hover.png" id="6_7yii4"]
+[ext_resource type="Texture2D" uid="uid://bpbuqx1ycbdxr" path="res://assets/images/quit-button.png" id="6_v3be1"]
+[ext_resource type="Texture2D" uid="uid://c1j3tv0hvp101" path="res://assets/images/title.png" id="9_p54wi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xqxrh"]
+texture = ExtResource("3_4yt8u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qupqx"]
+texture = ExtResource("4_p54wi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p54wi"]
+texture = ExtResource("5_4yt8u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jw8q3"]
+texture = ExtResource("5_xki8e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4yt8u"]
+texture = ExtResource("6_7yii4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bglms"]
+texture = ExtResource("6_v3be1")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 2070.0
+offset_bottom = 1272.0
+texture = ExtResource("1_08a8y")
+stretch_mode = 6
+
+[node name="background-overlay" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 65.0
+offset_bottom = 71.0
+scale = Vector2(32.0705, 17.9914)
+color = Color(0.301961, 0.341176, 0.478431, 0.878431)
+
+[node name="menu" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = -12.0
+offset_right = 292.0
+offset_bottom = 488.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.921198, 0.843525)
+texture = ExtResource("2_7yii4")
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -222.0
+offset_right = 173.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Play-Button" type="Button" parent="menu/VBoxContainer"]
+custom_minimum_size = Vector2(320, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/hover = SubResource("StyleBoxTexture_xqxrh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qupqx")
+
+[node name="Credits-Button" type="Button" parent="menu/VBoxContainer"]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_p54wi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jw8q3")
+
+[node name="Quit-Button" type="Button" parent="menu/VBoxContainer"]
+custom_minimum_size = Vector2(100, 130)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_4yt8u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bglms")
+
+[node name="title" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = 496.0
+offset_top = 160.0
+offset_right = 752.0
+offset_bottom = 266.0
+scale = Vector2(3.91094, 3.24341)
+texture = ExtResource("9_p54wi")
+stretch_mode = 5

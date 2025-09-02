@@ -1,0 +1,373 @@
+[gd_scene load_steps=52 format=3 uid="uid://ewefvesoxysh"]
+
+[ext_resource type="Texture2D" uid="uid://bn0lb1qhhigsa" path="res://assets/images/tenis-desk.png" id="1_l1v76"]
+[ext_resource type="Texture2D" uid="uid://cjuau815p66od" path="res://assets/images/player-sprite.png" id="2_ct7aa"]
+[ext_resource type="Script" uid="uid://ddcwalayqin5l" path="res://scripts/player_paddle.gd" id="2_ocj2s"]
+[ext_resource type="Texture2D" uid="uid://ds2jua2bm77jr" path="res://assets/images/enemy-sprite.png" id="3_ocj2s"]
+[ext_resource type="Script" uid="uid://cge8pvalqe1ai" path="res://scripts/enemy_paddle.gd" id="4_4bh5q"]
+[ext_resource type="Texture2D" uid="uid://bk02qcb6fpijw" path="res://assets/images/ball.png" id="4_ct7aa"]
+[ext_resource type="Script" uid="uid://cjbe4kapkusbs" path="res://scripts/ball.gd" id="5_din8e"]
+[ext_resource type="Script" uid="uid://03ytpuoysopk" path="res://scripts/popup_win.gd" id="9_bhmdk"]
+[ext_resource type="Texture2D" uid="uid://wouhx148ms38" path="res://assets/images/popup.png" id="9_hbo4f"]
+[ext_resource type="Texture2D" uid="uid://dqaiob8bhgh4e" path="res://assets/images/confirm-button.png" id="10_ctvyo"]
+[ext_resource type="Script" uid="uid://w0hxqqgs6ocu" path="res://scripts/confrim_popup_win_btn.gd" id="11_nt65e"]
+[ext_resource type="Texture2D" uid="uid://1brd0hmrmhqq" path="res://assets/images/player-sign.png" id="12_bhmdk"]
+[ext_resource type="Texture2D" uid="uid://dgjiflbu7pfwn" path="res://assets/images/win-sign.png" id="13_s5y6v"]
+[ext_resource type="Texture2D" uid="uid://cdd5tdqorlauo" path="res://assets/images/defeat-sign.png" id="15_s5y6v"]
+[ext_resource type="Script" uid="uid://yv0gfq36ecuq" path="res://scripts/popup_defeat.gd" id="16_pv71h"]
+[ext_resource type="Texture2D" uid="uid://cuuor2p50y4b6" path="res://assets/images/reset-buton.png" id="17_pv71h"]
+[ext_resource type="Script" uid="uid://d3nk5jfcsm3my" path="res://scripts/confrim_popup_defeat__btn.gd" id="17_w3w6i"]
+[ext_resource type="Script" uid="uid://br5qju5hh1878" path="res://scripts/reset_button.gd" id="18_m6b5a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ocj2s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_din8e"]
+size = Vector2(1.33757, 156.772)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_67d6o"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5vu4g"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s6y8e"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1tv7"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_37dvx"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p5dy6"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7tkd"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81iov"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_slt2r"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yjd84"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wexui"]
+texture = ExtResource("17_pv71h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vrqbj"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gm2mb"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jhs7r"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28f34"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3v6uj"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqnht"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_407ns"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srvxn"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s5y6v"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sqtar"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qixtg"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pv71h"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6b5a"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mesn4"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_525vb"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25e7j"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t4x03"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ucu43"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3w6i"]
+texture = ExtResource("10_ctvyo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cuhxg"]
+texture = ExtResource("10_ctvyo")
+
+[node name="Main" type="Node2D"]
+
+[node name="desk-sprite" type="Sprite2D" parent="."]
+position = Vector2(640, 384)
+rotation = -1.56968
+scale = Vector2(5.179, 8.15)
+texture = ExtResource("1_l1v76")
+
+[node name="Gameplay" type="Node2D" parent="."]
+
+[node name="player-paddle" type="CharacterBody2D" parent="Gameplay"]
+position = Vector2(120, 384)
+rotation = 1.56838
+collision_layer = 4
+script = ExtResource("2_ocj2s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gameplay/player-paddle"]
+scale = Vector2(4, 4)
+texture = ExtResource("2_ct7aa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Gameplay/player-paddle"]
+polygon = PackedVector2Array(-60, 8, -44, 8, -40, 12, -36, 20, -36, 24, 36, 24, 36, 20, 40, 12, 44, 8, 60, 8, 64, 12, 64, 44, 60, 48, -60, 48, -64, 44, -64, 12)
+
+[node name="enemy-paddle" type="CharacterBody2D" parent="Gameplay"]
+position = Vector2(1152, 384)
+rotation = 1.57505
+collision_layer = 4
+script = ExtResource("4_4bh5q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gameplay/enemy-paddle"]
+scale = Vector2(4, 4)
+texture = ExtResource("3_ocj2s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Gameplay/enemy-paddle"]
+scale = Vector2(1.0096, -0.992775)
+polygon = PackedVector2Array(-60, 8, -44, 8, -40, 12, -36, 20, -36, 24, 36, 24, 36, 20, 40, 12, 44, 8, 60, 8, 64, 12, 64, 44, 60, 48, -60, 48, -64, 44, -64, 12)
+
+[node name="ball" type="CharacterBody2D" parent="Gameplay"]
+position = Vector2(656, 384)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("5_din8e")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gameplay/ball"]
+scale = Vector2(1.97451, 1.87774)
+texture = ExtResource("4_ct7aa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/ball"]
+scale = Vector2(3.2719, -3.06228)
+shape = SubResource("CircleShape2D_ocj2s")
+
+[node name="invisible-wall" type="StaticBody2D" parent="Gameplay"]
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
+position = Vector2(640, 728)
+rotation = 1.57011
+scale = Vector2(20.635, 8.102)
+shape = SubResource("RectangleShape2D_din8e")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
+position = Vector2(640, 48)
+rotation = 1.57011
+scale = Vector2(5.655, 8.21)
+shape = SubResource("RectangleShape2D_din8e")
+
+[node name="goal-walls" type="StaticBody2D" parent="Gameplay"]
+collision_mask = 6
+
+[node name="player-wall" type="CollisionShape2D" parent="Gameplay/goal-walls"]
+position = Vector2(-72, 384)
+rotation = -3.14224
+scale = Vector2(-17.4843, 9.21011)
+shape = SubResource("RectangleShape2D_din8e")
+
+[node name="enemy-wall" type="CollisionShape2D" parent="Gameplay/goal-walls"]
+position = Vector2(1352, 384)
+rotation = -0.00234044
+scale = Vector2(-17.955, 9.16968)
+shape = SubResource("RectangleShape2D_din8e")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="enemy-point-label" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 704.0
+offset_top = -8.0
+offset_right = 744.0
+offset_bottom = 15.0
+scale = Vector2(3.0719, 3.02041)
+text = "0"
+horizontal_alignment = 1
+
+[node name="vs-label" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 600.0
+offset_right = 640.0
+offset_bottom = 49.0
+scale = Vector2(2.23499, 2.36253)
+text = "VS"
+horizontal_alignment = 1
+
+[node name="player-point-label" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = -8.0
+offset_right = 496.0
+offset_bottom = 15.0
+scale = Vector2(2.99306, 2.84367)
+text = "0"
+horizontal_alignment = 1
+
+[node name="reset-button" type="Button" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 1128.0
+offset_top = -8.0
+offset_right = 1136.0
+scale = Vector2(19.0862, 7.6041)
+theme_override_styles/focus = SubResource("StyleBoxTexture_67d6o")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_5vu4g")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_s6y8e")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_s1tv7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_37dvx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_p5dy6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_o7tkd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_81iov")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_slt2r")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_yjd84")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wexui")
+script = ExtResource("18_m6b5a")
+
+[node name="win_popup" type="PopupPanel" parent="UI"]
+initial_position = 1
+size = Vector2i(520, 520)
+visible = true
+script = ExtResource("9_bhmdk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/win_popup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="UI/win_popup/VBoxContainer"]
+position = Vector2(256, 256)
+scale = Vector2(1.13467, 1.00898)
+
+[node name="popup-bg" type="Sprite2D" parent="UI/win_popup/VBoxContainer/Camera2D"]
+position = Vector2(-1.7643e-05, -3.26019)
+scale = Vector2(2.15486, 2.13265)
+texture = ExtResource("9_hbo4f")
+
+[node name="confrim-btn" type="Button" parent="UI/win_popup/VBoxContainer/Camera2D"]
+offset_left = -196.07
+offset_top = 14.1275
+offset_right = -188.07
+offset_bottom = 22.1275
+scale = Vector2(50.7269, 26.5235)
+theme_override_styles/focus = SubResource("StyleBoxTexture_vrqbj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_gm2mb")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_jhs7r")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_28f34")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_3v6uj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_rqnht")
+theme_override_styles/hover = SubResource("StyleBoxTexture_407ns")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_srvxn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s5y6v")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_sqtar")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qixtg")
+script = ExtResource("11_nt65e")
+
+[node name="player-sign" type="Sprite2D" parent="UI/win_popup/VBoxContainer/Camera2D"]
+position = Vector2(-4.76837e-07, -135.251)
+scale = Vector2(1.62502, 1.95522)
+texture = ExtResource("12_bhmdk")
+
+[node name="win-sign" type="Sprite2D" parent="UI/win_popup/VBoxContainer/Camera2D"]
+position = Vector2(0, -23.7865)
+scale = Vector2(1.97198, 1.59576)
+texture = ExtResource("13_s5y6v")
+
+[node name="lose_popup" type="PopupPanel" parent="UI"]
+initial_position = 1
+size = Vector2i(520, 520)
+visible = true
+script = ExtResource("16_pv71h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/lose_popup"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="UI/lose_popup/VBoxContainer"]
+position = Vector2(256, 248)
+
+[node name="popup-bg" type="Sprite2D" parent="UI/lose_popup/VBoxContainer/Camera2D"]
+position = Vector2(2, 2)
+scale = Vector2(2.43313, 2.20891)
+texture = ExtResource("9_hbo4f")
+
+[node name="defeat-sign" type="Sprite2D" parent="UI/lose_popup/VBoxContainer/Camera2D"]
+position = Vector2(0, -32)
+scale = Vector2(2.59556, 2.92347)
+texture = ExtResource("15_s5y6v")
+
+[node name="player-sign" type="Sprite2D" parent="UI/lose_popup/VBoxContainer/Camera2D"]
+position = Vector2(9.99997, -134)
+scale = Vector2(1.91647, 1.9142)
+texture = ExtResource("12_bhmdk")
+
+[node name="confrim-btn2" type="Button" parent="UI/lose_popup/VBoxContainer/Camera2D"]
+offset_left = -240.0
+offset_top = -16.0
+offset_right = -232.0
+offset_bottom = -8.0
+scale = Vector2(61.7079, 32.2434)
+theme_override_styles/focus = SubResource("StyleBoxTexture_pv71h")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_m6b5a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mesn4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_525vb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_25e7j")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_t4x03")
+theme_override_styles/hover = SubResource("StyleBoxTexture_407ns")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ucu43")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w3w6i")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_cuhxg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_qixtg")
+script = ExtResource("17_w3w6i")
+
+[connection signal="pressed" from="UI/win_popup/VBoxContainer/Camera2D/confrim-btn" to="UI/win_popup/VBoxContainer/Camera2D/confrim-btn" method="_on_pressed"]
+[connection signal="pressed" from="UI/lose_popup/VBoxContainer/Camera2D/confrim-btn2" to="UI/lose_popup/VBoxContainer/Camera2D/confrim-btn2" method="_on_pressed"]
