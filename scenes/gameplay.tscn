@@ -1,134 +1,113 @@
-[gd_scene load_steps=52 format=3 uid="uid://ewefvesoxysh"]
+[gd_scene load_steps=51 format=3 uid="uid://ewefvesoxysh"]
 
 [ext_resource type="Texture2D" uid="uid://bn0lb1qhhigsa" path="res://assets/images/tenis-desk.png" id="1_l1v76"]
+[ext_resource type="Script" uid="uid://cjbe4kapkusbs" path="res://scripts/logic_gameplay.gd" id="1_w3w6i"]
 [ext_resource type="Texture2D" uid="uid://cjuau815p66od" path="res://assets/images/player-sprite.png" id="2_ct7aa"]
-[ext_resource type="Script" uid="uid://ddcwalayqin5l" path="res://scripts/player_paddle.gd" id="2_ocj2s"]
+[ext_resource type="Script" uid="uid://cpd24y41wq47v" path="res://scripts/player_paddle.gd" id="2_ocj2s"]
 [ext_resource type="Texture2D" uid="uid://ds2jua2bm77jr" path="res://assets/images/enemy-sprite.png" id="3_ocj2s"]
 [ext_resource type="Script" uid="uid://cge8pvalqe1ai" path="res://scripts/enemy_paddle.gd" id="4_4bh5q"]
 [ext_resource type="Texture2D" uid="uid://bk02qcb6fpijw" path="res://assets/images/ball.png" id="4_ct7aa"]
-[ext_resource type="Script" uid="uid://cjbe4kapkusbs" path="res://scripts/ball.gd" id="5_din8e"]
-[ext_resource type="Script" uid="uid://03ytpuoysopk" path="res://scripts/popup_win.gd" id="9_bhmdk"]
-[ext_resource type="Texture2D" uid="uid://wouhx148ms38" path="res://assets/images/popup.png" id="9_hbo4f"]
+[ext_resource type="Texture2D" uid="uid://rq34htfqal2b" path="res://assets/images/burger-menu-hover.png" id="8_m6b5a"]
+[ext_resource type="Texture2D" uid="uid://dohrqaybx5uwe" path="res://assets/images/burger-menu.png" id="8_pv71h"]
+[ext_resource type="Script" uid="uid://bngnprhrulikm" path="res://scripts/burger_menu_clicked.gd" id="8_w3w6i"]
+[ext_resource type="Texture2D" uid="uid://clskb2hgq4ko4" path="res://assets/images/menu.png" id="9_nt65e"]
+[ext_resource type="Texture2D" uid="uid://cjv73u08p4tdi" path="res://assets/images/win-title.png" id="10_bhmdk"]
 [ext_resource type="Texture2D" uid="uid://dqaiob8bhgh4e" path="res://assets/images/confirm-button.png" id="10_ctvyo"]
-[ext_resource type="Script" uid="uid://w0hxqqgs6ocu" path="res://scripts/confrim_popup_win_btn.gd" id="11_nt65e"]
-[ext_resource type="Texture2D" uid="uid://1brd0hmrmhqq" path="res://assets/images/player-sign.png" id="12_bhmdk"]
-[ext_resource type="Texture2D" uid="uid://dgjiflbu7pfwn" path="res://assets/images/win-sign.png" id="13_s5y6v"]
-[ext_resource type="Texture2D" uid="uid://cdd5tdqorlauo" path="res://assets/images/defeat-sign.png" id="15_s5y6v"]
-[ext_resource type="Script" uid="uid://yv0gfq36ecuq" path="res://scripts/popup_defeat.gd" id="16_pv71h"]
-[ext_resource type="Texture2D" uid="uid://cuuor2p50y4b6" path="res://assets/images/reset-buton.png" id="17_pv71h"]
-[ext_resource type="Script" uid="uid://d3nk5jfcsm3my" path="res://scripts/confrim_popup_defeat__btn.gd" id="17_w3w6i"]
-[ext_resource type="Script" uid="uid://br5qju5hh1878" path="res://scripts/reset_button.gd" id="18_m6b5a"]
+[ext_resource type="Script" uid="uid://bv341k32nvapl" path="res://scripts/popup_visibility.gd" id="10_pv71h"]
+[ext_resource type="Texture2D" uid="uid://bbjambrff0ecn" path="res://assets/images/confirm-button-hover.png" id="11_s5y6v"]
+[ext_resource type="Texture2D" uid="uid://tw5jtirfya2p" path="res://assets/images/lose-title.png" id="13_407ns"]
+[ext_resource type="Script" uid="uid://d3nk5jfcsm3my" path="res://scripts/confirm_win_popup.gd" id="15_m6b5a"]
+[ext_resource type="Script" uid="uid://w0hxqqgs6ocu" path="res://scripts/confrim_lose_popup.gd" id="17_mesn4"]
+[ext_resource type="Texture2D" uid="uid://dtk82frnmd1il" path="res://assets/images/pause-menu.png" id="17_pv71h"]
+[ext_resource type="Texture2D" uid="uid://b71awtn0k5hpx" path="res://assets/images/exit-button-hover.png" id="20_cuhxg"]
+[ext_resource type="Texture2D" uid="uid://b3iilx2ipv174" path="res://assets/images/exit-button.png" id="21_vrqbj"]
+[ext_resource type="Texture2D" uid="uid://bchvtuj7pruex" path="res://assets/images/resume-buttton-hover.png" id="22_gm2mb"]
+[ext_resource type="Script" uid="uid://bf4cp4piix8rb" path="res://scripts/exit_button.gd" id="22_jhs7r"]
+[ext_resource type="Texture2D" uid="uid://nvy7wuegloki" path="res://assets/images/resume-buttton.png" id="23_jhs7r"]
+[ext_resource type="Texture2D" uid="uid://c6gyfbobe6xof" path="res://assets/images/reset-button-hover.png" id="24_28f34"]
+[ext_resource type="Script" uid="uid://c50h3cphmqse0" path="res://scripts/resume_button.gd" id="24_vrqbj"]
+[ext_resource type="Texture2D" uid="uid://cqh4mnk8wa42x" path="res://assets/images/reset-button.png" id="25_3v6uj"]
+[ext_resource type="Script" uid="uid://br5qju5hh1878" path="res://scripts/reset_button.gd" id="25_jhs7r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ocj2s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_din8e"]
-size = Vector2(1.33757, 156.772)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_67d6o"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5vu4g"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s6y8e"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1tv7"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_37dvx"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p5dy6"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7tkd"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_81iov"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_slt2r"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yjd84"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wexui"]
-texture = ExtResource("17_pv71h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vrqbj"]
-texture = ExtResource("10_ctvyo")
+size = Vector2(1.40504, 156.772)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gm2mb"]
-texture = ExtResource("10_ctvyo")
+texture = ExtResource("11_s5y6v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3w6i"]
+texture = ExtResource("11_s5y6v")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jhs7r"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28f34"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3v6uj"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqnht"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_407ns"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srvxn"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s5y6v"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sqtar"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qixtg"]
-texture = ExtResource("10_ctvyo")
+texture = ExtResource("11_s5y6v")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pv71h"]
 texture = ExtResource("10_ctvyo")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6b5a"]
-texture = ExtResource("10_ctvyo")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_28f34"]
+texture = ExtResource("11_s5y6v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3v6uj"]
+texture = ExtResource("11_s5y6v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqnht"]
+texture = ExtResource("20_cuhxg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srvxn"]
+texture = ExtResource("20_cuhxg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sqtar"]
+texture = ExtResource("21_vrqbj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_67d6o"]
+texture = ExtResource("22_gm2mb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5vu4g"]
+texture = ExtResource("22_gm2mb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vrqbj"]
+texture = ExtResource("22_gm2mb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s6y8e"]
+texture = ExtResource("23_jhs7r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1tv7"]
+texture = ExtResource("24_28f34")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_37dvx"]
+texture = ExtResource("24_28f34")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p5dy6"]
+texture = ExtResource("25_3v6uj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mesn4"]
-texture = ExtResource("10_ctvyo")
+texture = ExtResource("8_m6b5a")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_525vb"]
-texture = ExtResource("10_ctvyo")
+texture = ExtResource("8_m6b5a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6b5a"]
+texture = ExtResource("8_m6b5a")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_25e7j"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t4x03"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ucu43"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3w6i"]
-texture = ExtResource("10_ctvyo")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cuhxg"]
-texture = ExtResource("10_ctvyo")
+texture = ExtResource("8_pv71h")
 
 [node name="Main" type="Node2D"]
 
 [node name="desk-sprite" type="Sprite2D" parent="."]
-position = Vector2(640, 384)
+position = Vector2(960, 643)
 rotation = -1.56968
-scale = Vector2(5.179, 8.15)
+scale = Vector2(14.0974, 24.7875)
 texture = ExtResource("1_l1v76")
 
 [node name="Gameplay" type="Node2D" parent="."]
+position = Vector2(40, -16)
+scale = Vector2(1.44733, 1.59331)
 
 [node name="player-paddle" type="CharacterBody2D" parent="Gameplay"]
-position = Vector2(120, 384)
+position = Vector2(105.021, 381.594)
 rotation = 1.56838
 collision_layer = 4
 script = ExtResource("2_ocj2s")
@@ -141,7 +120,7 @@ texture = ExtResource("2_ct7aa")
 polygon = PackedVector2Array(-60, 8, -44, 8, -40, 12, -36, 20, -36, 24, 36, 24, 36, 20, 40, 12, 44, 8, 60, 8, 64, 12, 64, 44, 60, 48, -60, 48, -64, 44, -64, 12)
 
 [node name="enemy-paddle" type="CharacterBody2D" parent="Gameplay"]
-position = Vector2(1152, 384)
+position = Vector2(1166.29, 381.595)
 rotation = 1.57505
 collision_layer = 4
 script = ExtResource("4_4bh5q")
@@ -158,7 +137,7 @@ polygon = PackedVector2Array(-60, 8, -44, 8, -40, 12, -36, 20, -36, 24, 36, 24, 
 position = Vector2(656, 384)
 collision_layer = 2
 collision_mask = 5
-script = ExtResource("5_din8e")
+script = ExtResource("1_w3w6i")
 
 [node name="Sprite2D" type="Sprite2D" parent="Gameplay/ball"]
 scale = Vector2(1.97451, 1.87774)
@@ -171,23 +150,23 @@ shape = SubResource("CircleShape2D_ocj2s")
 [node name="invisible-wall" type="StaticBody2D" parent="Gameplay"]
 collision_mask = 6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
-position = Vector2(640, 728)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
+position = Vector2(635.654, 100.42)
 rotation = 1.57011
-scale = Vector2(20.635, 8.102)
+scale = Vector2(17.7997, 8.54793)
 shape = SubResource("RectangleShape2D_din8e")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
-position = Vector2(640, 48)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
+position = Vector2(637.035, 728.044)
 rotation = 1.57011
-scale = Vector2(5.655, 8.21)
+scale = Vector2(18.0099, 8.80874)
 shape = SubResource("RectangleShape2D_din8e")
 
 [node name="goal-walls" type="StaticBody2D" parent="Gameplay"]
 collision_mask = 6
 
 [node name="player-wall" type="CollisionShape2D" parent="Gameplay/goal-walls"]
-position = Vector2(-72, 384)
+position = Vector2(-82.9114, 381.594)
 rotation = -3.14224
 scale = Vector2(-17.4843, 9.21011)
 shape = SubResource("RectangleShape2D_din8e")
@@ -199,175 +178,190 @@ scale = Vector2(-17.955, 9.16968)
 shape = SubResource("RectangleShape2D_din8e")
 
 [node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("10_pv71h")
+
+[node name="bg-overlay" type="ColorRect" parent="UI"]
+offset_left = 3.0
+offset_right = 43.0
+offset_bottom = 40.0
+scale = Vector2(48.554, 30.9094)
+color = Color(0.314316, 0.314316, 0.314316, 0.521569)
+
+[node name="win_info" type="TextureRect" parent="UI"]
+offset_left = 659.0
+offset_top = 304.0
+offset_right = 915.0
+offset_bottom = 560.0
+scale = Vector2(2.64933, 2.40117)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("9_nt65e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/win_info"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.7252
+offset_top = -101.346
+offset_right = 170.275
+offset_bottom = 262.654
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.701027, 0.542157)
+alignment = 1
+
+[node name="win-title" type="TextureRect" parent="UI/win_info/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_bhmdk")
+
+[node name="Confirm-Button" type="Button" parent="UI/win_info/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_gm2mb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w3w6i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jhs7r")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pv71h")
+script = ExtResource("15_m6b5a")
+
+[node name="lose_info" type="TextureRect" parent="UI"]
+offset_left = 660.0
+offset_top = 306.0
+offset_right = 916.0
+offset_bottom = 562.0
+scale = Vector2(2.64933, 2.40117)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("9_nt65e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/lose_info"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.7252
+offset_top = -101.346
+offset_right = 170.275
+offset_bottom = 262.654
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.701027, 0.542157)
+alignment = 1
+
+[node name="lose-title" type="TextureRect" parent="UI/lose_info/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_407ns")
+
+[node name="Confirm-Button" type="Button" parent="UI/lose_info/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_28f34")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w3w6i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3v6uj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pv71h")
+script = ExtResource("17_mesn4")
+
+[node name="paused-menu" type="TextureRect" parent="UI"]
+offset_left = 384.0
+offset_top = 104.0
+offset_right = 640.0
+offset_bottom = 299.0
+scale = Vector2(4.5165, 4.64868)
+texture = ExtResource("17_pv71h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/paused-menu"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.102
+offset_top = -16.1866
+offset_right = 99.8979
+offset_bottom = 33.8134
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="exit-button" type="Button" parent="UI/paused-menu/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_rqnht")
+theme_override_styles/hover = SubResource("StyleBoxTexture_srvxn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_sqtar")
+script = ExtResource("22_jhs7r")
+
+[node name="resume-button" type="Button" parent="UI/paused-menu/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_67d6o")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5vu4g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vrqbj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_s6y8e")
+script = ExtResource("24_vrqbj")
+
+[node name="restart-button" type="Button" parent="UI/paused-menu/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_s1tv7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_37dvx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_p5dy6")
+script = ExtResource("25_jhs7r")
 
 [node name="HUD" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 48.0
+offset_bottom = 56.0
+scale = Vector2(1.47265, 2.00855)
 
 [node name="enemy-point-label" type="Label" parent="UI/HUD"]
 layout_mode = 0
-offset_left = 704.0
-offset_top = -8.0
-offset_right = 744.0
-offset_bottom = 15.0
+offset_left = 702.815
+offset_top = -2.48936
+offset_right = 742.815
+offset_bottom = 20.5106
 scale = Vector2(3.0719, 3.02041)
 text = "0"
 horizontal_alignment = 1
 
 [node name="vs-label" type="Label" parent="UI/HUD"]
 layout_mode = 0
-offset_left = 600.0
-offset_right = 640.0
-offset_bottom = 49.0
+offset_left = 627.44
+offset_top = 10.9532
+offset_right = 667.44
+offset_bottom = 59.9532
 scale = Vector2(2.23499, 2.36253)
 text = "VS"
 horizontal_alignment = 1
 
 [node name="player-point-label" type="Label" parent="UI/HUD"]
 layout_mode = 0
-offset_left = 456.0
-offset_top = -8.0
-offset_right = 496.0
-offset_bottom = 15.0
+offset_left = 497.063
+offset_top = -0.995743
+offset_right = 537.063
+offset_bottom = 22.0043
 scale = Vector2(2.99306, 2.84367)
 text = "0"
 horizontal_alignment = 1
 
-[node name="reset-button" type="Button" parent="UI/HUD"]
+[node name="burger-menu" type="Button" parent="UI/HUD"]
 layout_mode = 0
-offset_left = 1128.0
-offset_top = -8.0
-offset_right = 1136.0
-scale = Vector2(19.0862, 7.6041)
-theme_override_styles/focus = SubResource("StyleBoxTexture_67d6o")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_5vu4g")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_s6y8e")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_s1tv7")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_37dvx")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_p5dy6")
-theme_override_styles/hover = SubResource("StyleBoxTexture_o7tkd")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_81iov")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_slt2r")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_yjd84")
-theme_override_styles/normal = SubResource("StyleBoxTexture_wexui")
-script = ExtResource("18_m6b5a")
-
-[node name="win_popup" type="PopupPanel" parent="UI"]
-initial_position = 1
-size = Vector2i(520, 520)
-visible = true
-script = ExtResource("9_bhmdk")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/win_popup"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -256.0
-offset_right = 256.0
-offset_bottom = 256.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="Camera2D" type="Camera2D" parent="UI/win_popup/VBoxContainer"]
-position = Vector2(256, 256)
-scale = Vector2(1.13467, 1.00898)
-
-[node name="popup-bg" type="Sprite2D" parent="UI/win_popup/VBoxContainer/Camera2D"]
-position = Vector2(-1.7643e-05, -3.26019)
-scale = Vector2(2.15486, 2.13265)
-texture = ExtResource("9_hbo4f")
-
-[node name="confrim-btn" type="Button" parent="UI/win_popup/VBoxContainer/Camera2D"]
-offset_left = -196.07
-offset_top = 14.1275
-offset_right = -188.07
-offset_bottom = 22.1275
-scale = Vector2(50.7269, 26.5235)
-theme_override_styles/focus = SubResource("StyleBoxTexture_vrqbj")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_gm2mb")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_jhs7r")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_28f34")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_3v6uj")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_rqnht")
-theme_override_styles/hover = SubResource("StyleBoxTexture_407ns")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_srvxn")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_s5y6v")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_sqtar")
-theme_override_styles/normal = SubResource("StyleBoxTexture_qixtg")
-script = ExtResource("11_nt65e")
-
-[node name="player-sign" type="Sprite2D" parent="UI/win_popup/VBoxContainer/Camera2D"]
-position = Vector2(-4.76837e-07, -135.251)
-scale = Vector2(1.62502, 1.95522)
-texture = ExtResource("12_bhmdk")
-
-[node name="win-sign" type="Sprite2D" parent="UI/win_popup/VBoxContainer/Camera2D"]
-position = Vector2(0, -23.7865)
-scale = Vector2(1.97198, 1.59576)
-texture = ExtResource("13_s5y6v")
-
-[node name="lose_popup" type="PopupPanel" parent="UI"]
-initial_position = 1
-size = Vector2i(520, 520)
-visible = true
-script = ExtResource("16_pv71h")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/lose_popup"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -256.0
-offset_right = 256.0
-offset_bottom = 256.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="Camera2D" type="Camera2D" parent="UI/lose_popup/VBoxContainer"]
-position = Vector2(256, 248)
-
-[node name="popup-bg" type="Sprite2D" parent="UI/lose_popup/VBoxContainer/Camera2D"]
-position = Vector2(2, 2)
-scale = Vector2(2.43313, 2.20891)
-texture = ExtResource("9_hbo4f")
-
-[node name="defeat-sign" type="Sprite2D" parent="UI/lose_popup/VBoxContainer/Camera2D"]
-position = Vector2(0, -32)
-scale = Vector2(2.59556, 2.92347)
-texture = ExtResource("15_s5y6v")
-
-[node name="player-sign" type="Sprite2D" parent="UI/lose_popup/VBoxContainer/Camera2D"]
-position = Vector2(9.99997, -134)
-scale = Vector2(1.91647, 1.9142)
-texture = ExtResource("12_bhmdk")
-
-[node name="confrim-btn2" type="Button" parent="UI/lose_popup/VBoxContainer/Camera2D"]
-offset_left = -240.0
-offset_top = -16.0
-offset_right = -232.0
-offset_bottom = -8.0
-scale = Vector2(61.7079, 32.2434)
-theme_override_styles/focus = SubResource("StyleBoxTexture_pv71h")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_m6b5a")
-theme_override_styles/disabled = SubResource("StyleBoxTexture_mesn4")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_525vb")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_25e7j")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_t4x03")
-theme_override_styles/hover = SubResource("StyleBoxTexture_407ns")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ucu43")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_w3w6i")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_cuhxg")
-theme_override_styles/normal = SubResource("StyleBoxTexture_qixtg")
-script = ExtResource("17_w3w6i")
-
-[connection signal="pressed" from="UI/win_popup/VBoxContainer/Camera2D/confrim-btn" to="UI/win_popup/VBoxContainer/Camera2D/confrim-btn" method="_on_pressed"]
-[connection signal="pressed" from="UI/lose_popup/VBoxContainer/Camera2D/confrim-btn2" to="UI/lose_popup/VBoxContainer/Camera2D/confrim-btn2" method="_on_pressed"]
+offset_left = 23.7667
+offset_top = -4.97872
+offset_right = 279.767
+offset_bottom = 225.021
+scale = Vector2(0.381998, 0.298119)
+theme_override_styles/focus = SubResource("StyleBoxTexture_mesn4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_525vb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m6b5a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_25e7j")
+script = ExtResource("8_w3w6i")

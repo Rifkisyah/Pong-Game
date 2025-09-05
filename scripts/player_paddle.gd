@@ -1,4 +1,7 @@
-extends  CharacterBody2D
+extends CharacterBody2D
+
+@onready var win_popup = $"../../UI/win_info"
+@onready var lose_popup = $"../../UI/lose_info"
 
 var SPEED = 250
 var default_position: Vector2
@@ -7,9 +10,9 @@ func _ready() -> void:
 	default_position = global_position
 
 func _physics_process(_delta) -> void:
-	if $"../../UI/win_popup".visible:
+	if win_popup.visible:
 		return
-	elif $"../../UI/lose_popup" .visible:
+	elif lose_popup.visible:
 		return
 	
 	velocity.x = 0

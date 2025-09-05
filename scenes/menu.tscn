@@ -1,14 +1,32 @@
-[gd_scene load_steps=16 format=3 uid="uid://nhso0jjshe80"]
+[gd_scene load_steps=42 format=3 uid="uid://nhso0jjshe80"]
 
 [ext_resource type="Texture2D" uid="uid://cj202rrvv2g3r" path="res://assets/images/background.png" id="1_08a8y"]
 [ext_resource type="Texture2D" uid="uid://clskb2hgq4ko4" path="res://assets/images/menu.png" id="2_7yii4"]
 [ext_resource type="Texture2D" uid="uid://brcy8u2o7bk2x" path="res://assets/images/play-button-hover.png" id="3_4yt8u"]
 [ext_resource type="Texture2D" uid="uid://dys3wptv8obyu" path="res://assets/images/play-button.png" id="4_p54wi"]
 [ext_resource type="Texture2D" uid="uid://buq5o81r4r8j6" path="res://assets/images/credits-button-hover.png" id="5_4yt8u"]
+[ext_resource type="Script" uid="uid://uad38j7eo05n" path="res://scripts/play_button_clicked.gd" id="5_mj5lg"]
 [ext_resource type="Texture2D" uid="uid://cmi6d1bxo3o0f" path="res://assets/images/credits-button.png" id="5_xki8e"]
 [ext_resource type="Texture2D" uid="uid://c4na6s7h0adnf" path="res://assets/images/quit-button-hover.png" id="6_7yii4"]
 [ext_resource type="Texture2D" uid="uid://bpbuqx1ycbdxr" path="res://assets/images/quit-button.png" id="6_v3be1"]
 [ext_resource type="Texture2D" uid="uid://c1j3tv0hvp101" path="res://assets/images/title.png" id="9_p54wi"]
+[ext_resource type="Script" uid="uid://f6ytka6mpnv7" path="res://scripts/visibility_ui_menu.gd" id="11_ufwb2"]
+[ext_resource type="Texture2D" uid="uid://dekw4k0eokboo" path="res://assets/images/easy-diffculty-button-hover.png" id="12_g6gyw"]
+[ext_resource type="Texture2D" uid="uid://crohdn5f1a6fs" path="res://assets/images/easy-diffculty-button.png" id="13_3dmrc"]
+[ext_resource type="Texture2D" uid="uid://cm3i7s6nc8nql" path="res://assets/images/normal-diffculty-button-hover.png" id="14_81l6r"]
+[ext_resource type="Script" uid="uid://dj3vuvjvcwqy8" path="res://scripts/easy_difficulty.gd" id="14_oi1it"]
+[ext_resource type="Texture2D" uid="uid://dmyjs8ihn8lll" path="res://assets/images/normal-diffculty-button.png" id="15_rsfmq"]
+[ext_resource type="Texture2D" uid="uid://dyv0lpx4ww4de" path="res://assets/images/hard-difculty-button-hover.png" id="16_oi1it"]
+[ext_resource type="Script" uid="uid://31oexa37hpns" path="res://scripts/normal_difficulty.gd" id="17_6wigr"]
+[ext_resource type="Texture2D" uid="uid://b2k1oaxdqeu7g" path="res://assets/images/hard-difculty-button.png" id="17_fy8yy"]
+[ext_resource type="Texture2D" uid="uid://y87utngpl8bc" path="res://assets/images/difficulty-level.png" id="18_3dmrc"]
+[ext_resource type="Script" uid="uid://dehulbbqrisah" path="res://scripts/hard_difficulty.gd" id="20_lnf0i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ndyk"]
+texture = ExtResource("3_4yt8u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qewb"]
+texture = ExtResource("3_4yt8u")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xqxrh"]
 texture = ExtResource("3_4yt8u")
@@ -28,6 +46,42 @@ texture = ExtResource("6_7yii4")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bglms"]
 texture = ExtResource("6_v3be1")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwfsl"]
+texture = ExtResource("12_g6gyw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6wigr"]
+texture = ExtResource("12_g6gyw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vhsb5"]
+texture = ExtResource("12_g6gyw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lnf0i"]
+texture = ExtResource("13_3dmrc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oi1it"]
+texture = ExtResource("14_81l6r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ffqrc"]
+texture = ExtResource("14_81l6r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a04p5"]
+texture = ExtResource("14_81l6r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x16fv"]
+texture = ExtResource("15_rsfmq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fy8yy"]
+texture = ExtResource("16_oi1it")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g54pe"]
+texture = ExtResource("16_oi1it")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5gwo"]
+texture = ExtResource("16_oi1it")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48ryc"]
+texture = ExtResource("17_fy8yy")
+
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -35,6 +89,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("11_ufwb2")
 
 [node name="background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -88,8 +143,11 @@ alignment = 1
 custom_minimum_size = Vector2(320, 150)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_styles/focus = SubResource("StyleBoxTexture_0ndyk")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0qewb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xqxrh")
 theme_override_styles/normal = SubResource("StyleBoxTexture_qupqx")
+script = ExtResource("5_mj5lg")
 
 [node name="Credits-Button" type="Button" parent="menu/VBoxContainer"]
 custom_minimum_size = Vector2(250, 100)
@@ -112,3 +170,78 @@ offset_bottom = 266.0
 scale = Vector2(3.91094, 3.24341)
 texture = ExtResource("9_p54wi")
 stretch_mode = 5
+
+[node name="difculty-menu" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -244.0
+offset_right = -144.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.37386, 3.07076)
+texture = ExtResource("2_7yii4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="difculty-menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.3189
+offset_top = -94.1322
+offset_right = -45.3189
+offset_bottom = -54.1322
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.36356, 4.50104)
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Easy-Button" type="Button" parent="difculty-menu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_hwfsl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6wigr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vhsb5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lnf0i")
+script = ExtResource("14_oi1it")
+
+[node name="Normal-Button" type="Button" parent="difculty-menu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_oi1it")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ffqrc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_a04p5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_x16fv")
+script = ExtResource("17_6wigr")
+
+[node name="Hard-Button" type="Button" parent="difculty-menu/VBoxContainer"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_fy8yy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g54pe")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b5gwo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_48ryc")
+script = ExtResource("20_lnf0i")
+
+[node name="difficulty-title" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -808.0
+offset_top = 112.0
+offset_right = -552.0
+offset_bottom = 133.0
+grow_horizontal = 2
+scale = Vector2(6.51081, 7.73652)
+texture = ExtResource("18_3dmrc")
