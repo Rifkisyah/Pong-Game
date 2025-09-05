@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://ewefvesoxysh"]
+[gd_scene load_steps=52 format=3 uid="uid://ewefvesoxysh"]
 
 [ext_resource type="Texture2D" uid="uid://bn0lb1qhhigsa" path="res://assets/images/tenis-desk.png" id="1_l1v76"]
 [ext_resource type="Script" uid="uid://cjbe4kapkusbs" path="res://scripts/logic_gameplay.gd" id="1_w3w6i"]
@@ -30,6 +30,8 @@
 [ext_resource type="Script" uid="uid://br5qju5hh1878" path="res://scripts/reset_button.gd" id="25_jhs7r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ocj2s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhs7r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_din8e"]
 size = Vector2(1.40504, 156.772)
@@ -98,7 +100,7 @@ texture = ExtResource("8_pv71h")
 
 [node name="desk-sprite" type="Sprite2D" parent="."]
 position = Vector2(960, 643)
-rotation = -1.56968
+rotation = -1.5708
 scale = Vector2(14.0974, 24.7875)
 texture = ExtResource("1_l1v76")
 
@@ -150,17 +152,15 @@ shape = SubResource("CircleShape2D_ocj2s")
 [node name="invisible-wall" type="StaticBody2D" parent="Gameplay"]
 collision_mask = 6
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
-position = Vector2(635.654, 100.42)
-rotation = 1.57011
-scale = Vector2(17.7997, 8.54793)
-shape = SubResource("RectangleShape2D_din8e")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
+position = Vector2(554.815, 100.42)
+scale = Vector2(100, 1)
+shape = SubResource("RectangleShape2D_jhs7r")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
-position = Vector2(637.035, 728.044)
-rotation = 1.57011
-scale = Vector2(18.0099, 8.80874)
-shape = SubResource("RectangleShape2D_din8e")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Gameplay/invisible-wall"]
+position = Vector2(536.851, 719.257)
+scale = Vector2(100, 1)
+shape = SubResource("RectangleShape2D_jhs7r")
 
 [node name="goal-walls" type="StaticBody2D" parent="Gameplay"]
 collision_mask = 6
@@ -181,6 +181,7 @@ shape = SubResource("RectangleShape2D_din8e")
 script = ExtResource("10_pv71h")
 
 [node name="bg-overlay" type="ColorRect" parent="UI"]
+visible = false
 offset_left = 3.0
 offset_right = 43.0
 offset_bottom = 40.0
@@ -188,6 +189,7 @@ scale = Vector2(48.554, 30.9094)
 color = Color(0.314316, 0.314316, 0.314316, 0.521569)
 
 [node name="win_info" type="TextureRect" parent="UI"]
+visible = false
 offset_left = 659.0
 offset_top = 304.0
 offset_right = 915.0
@@ -227,6 +229,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_pv71h")
 script = ExtResource("15_m6b5a")
 
 [node name="lose_info" type="TextureRect" parent="UI"]
+visible = false
 offset_left = 660.0
 offset_top = 306.0
 offset_right = 916.0
@@ -266,6 +269,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_pv71h")
 script = ExtResource("17_mesn4")
 
 [node name="paused-menu" type="TextureRect" parent="UI"]
+visible = false
 offset_left = 384.0
 offset_top = 104.0
 offset_right = 640.0
